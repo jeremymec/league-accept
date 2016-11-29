@@ -11,14 +11,15 @@ def get_window():
     win32gui.EnumWindows(enum_cb, toplist)
 
     league_client = [(hwnd, title) for hwnd, title in winlist if 'league client' in title.lower()]
-    league_client = league_client[0]
+    print("Number of Process" + str(len(league_client)))
+    league_client = league_client[2]
     hwnd = league_client[0]
 
     return hwnd
 
 
 def find_window():
-    win32gui.FindWindow(None, 'League Client')
+    return win32gui.FindWindow(None, 'League Client')
 
 
 def take_screenshot():
