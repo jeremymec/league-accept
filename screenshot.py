@@ -2,7 +2,7 @@
 import win32gui
 import pyscreenshot as ImageGrab
 
-
+# Test for Github
 def get_window():
     toplist, winlist = [], []
 
@@ -16,10 +16,6 @@ def get_window():
     hwnd = league_client[0]
 
     return hwnd
-
-
-def find_window():
-    return win32gui.FindWindow(None, 'League Client')
 
 
 def take_screenshot():
